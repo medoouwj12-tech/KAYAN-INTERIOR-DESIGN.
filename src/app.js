@@ -75,7 +75,7 @@ function applyLocalization(){
   document.body.querySelectorAll('*').forEach(el=>{const saved=originalAttributes.get(el)||{};for(const name of ['aria-label','aria-labelledby','title','alt','placeholder']){if(!saved[name]&&el.hasAttribute(name))saved[name]=el.getAttribute(name);if(saved[name])el.setAttribute(name,language==='ar'?translateText(saved[name]):saved[name]);}originalAttributes.set(el,saved);});
   themeToggle.querySelector('span').textContent=theme==='dark'?'☼':'☾';themeToggle.setAttribute('aria-label',translateText(theme==='dark'?'Switch to light mode':'Switch to dark mode'));themeToggle.title=themeToggle.getAttribute('aria-label');themeToggle.setAttribute('aria-pressed',String(theme==='dark'));
   languageToggle.textContent=language==='ar'?'EN':'عربي';const languageLabel=translateText(language==='ar'?'Switch language to English':'Switch language to Arabic');languageToggle.setAttribute('aria-label',languageLabel);languageToggle.title=languageLabel;
-  document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#201f1c':'#f7f5f0';
+  document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#000000':'#f7f5f0';
 }
 function closeMenu(){nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label',translateText('Open navigation'));document.body.classList.remove('menu-open');}
 function animatePage(){main.classList.remove('page-enter');void main.offsetWidth;main.classList.add('page-enter');}

@@ -44,3 +44,13 @@ html[dir="rtl"] .image-placeholder{left:auto;right:14px}
 @media(max-width:560px){.header-tools{right:var(--gutter)}.header-contact span{font-size:17px}html[lang="ar"] .hero h1{font-size:clamp(42px,11vw,58px);line-height:1.25}.hero-content{max-width:100%}html[lang="ar"] .section-heading h2,html[lang="ar"] .page-heading h1{font-size:clamp(42px,12vw,52px);line-height:1.25}html[dir="rtl"] .timeline{padding-right:30px}html[dir="rtl"] .timeline-item::before{right:-36px}}
 @media(prefers-reduced-motion:reduce){main.page-enter{animation:none}.scroll-progress{display:none}}
 @keyframes pageEnter{from{opacity:.45;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+@media(max-width:850px){
+  .site-header{backdrop-filter:none}
+  .primary-nav{position:fixed;inset:0;width:100%;height:100vh;height:100dvh;overflow-y:auto;padding:100px var(--gutter) 48px;background:#292825!important;color:#f7f5f0!important;opacity:1!important;}
+  .primary-nav a{color:#f7f5f0;opacity:1}
+  .primary-nav a:hover{opacity:1}
+  .primary-nav.open{z-index:1;transform:none}
+  .menu-toggle{z-index:3}
+  body.menu-open .menu-toggle span{background:#f7f5f0}
+}
